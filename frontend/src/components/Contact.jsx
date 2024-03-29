@@ -1,30 +1,31 @@
 import React from 'react'
-import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import { TicketIcon, CurrencyDollarIcon, UserGroupIcon, CalendarIcon } from '@heroicons/react/24/outline'
 
 const features = [
   {
     name: 'Event Ticket Bookings',
     description:
       'Book events seemlessly and as soon as they are available.',
-    icon: CloudArrowUpIcon,
+    icon: TicketIcon
+  ,
   },
   {
     name: 'P2P Resale',
     description:
       'Cannot go the event? No problem. You can sell your tickets to the ones who want to buy it.',
-    icon: LockClosedIcon,
+    icon: CurrencyDollarIcon,
   },
   {
     name: 'Gig Buddies',
     description:
       'Find people who are interested in the same events as you.',
-    icon: ArrowPathIcon,
+    icon: UserGroupIcon,
   },
   {
     name: 'Calender',
     description:
       'Can book in advance, as soon as the early bird hits our portal.',
-    icon: FingerPrintIcon,
+    icon: CalendarIcon,
   },
 ]
 export default function Contact() {
@@ -32,7 +33,7 @@ export default function Contact() {
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-indigo-600">GIG BUDDY</h2>
+          <h2 className="text-base font-semibold leading-7 text-red-600">GIG BUDDY</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Unlock the Beat: Book, Resell, Chat. 
           </p>
@@ -45,7 +46,7 @@ export default function Contact() {
             {features.map((feature) => (
               <div key={feature.name} className="relative pl-16">
                 <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-600">
                     <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
                   {feature.name}

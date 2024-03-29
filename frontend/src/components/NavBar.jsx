@@ -6,6 +6,7 @@ import {Link, useLocation} from "react-router-dom";
 const navigation = [
   { name: 'Gigs', to: '/gigs', current: false },
   { name: 'Chat', to: '/chat', current: false },
+  { name: 'ReSell', to: '/resell', current: false },
   { name: 'Calender', to: '/calender', current: false },
   { name: 'Contact', to: '/contact', current: false },
 ]
@@ -23,7 +24,7 @@ const location = useLocation();
     <Disclosure as="nav" className="bg-red-600">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-9xl px-2 sm:px-9 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 
@@ -37,14 +38,14 @@ const location = useLocation();
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
+              <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="h-10 w-12"
-                    src="https://i.ibb.co/PMgmBj6/logo.webp"
+                    style={{height:"90px",width:"150px", borderRadius:"10px"}}
+                    src="./src/assets/logo.png"
                     alt="GigBuddy"
                   />
                 </div>
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
@@ -80,8 +81,8 @@ const location = useLocation();
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
                       <img
-                        className="h-8 w-8 rounded-full"
-                        src="https://media.istockphoto.com/id/181080008/photo/close-up-photo-of-beautiful-woman-with-colorful-painted-face.jpg?s=612x612&w=0&k=20&c=GyJDE_2WabHyVTnjJR20arANAIwIVlHf6b0JtxJAKho="
+                        className="h-8 w-8 rounded-full white"
+                        src="https://cdn-icons-png.freepik.com/256/1144/1144760.png"
                         alt=""
                       />
                     </Menu.Button>
