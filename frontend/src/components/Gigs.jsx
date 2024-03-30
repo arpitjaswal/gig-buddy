@@ -6,7 +6,7 @@ const products = [
     {
       id: 1,
       name: 'Seedhe Maut',
-      href: '#',
+      href: '/eventpage',
       imageSrc: 'https://static.hiphopdx.com/2021/09/Seedhe-Maut-NATKHAT_1280x720_09142021-1200x675.jpg',
       imageAlt: "Front of men's Basic Tee in black.",
       price: '25/04/2024',
@@ -15,7 +15,7 @@ const products = [
     {
       id: 2,
       name: 'Kenny Beats ',
-      href: '#',
+      href: '/underconstruction',
       imageSrc: 'https://i.ytimg.com/vi/vc35GjGCVHY/maxresdefault.jpg',
       imageAlt: "Front of men's Basic Tee in black.",
       price: '04/05/2024',
@@ -24,7 +24,7 @@ const products = [
     {
       id: 3,
       name: `The Pervert's Guide to Ideology: Slavoj Zizek`,
-      href: '#',
+      href: '/underconstruction',
       imageSrc: 'https://media.timeout.com/images/105439173/1372/772/image.webp',
       imageAlt: "Front of men's Basic Tee in black.",
       price: '04/05/2024',
@@ -42,7 +42,7 @@ const products = [
     }
     return (
       <div className="bg-white">
-        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-10 lg:max-w-6xl lg:px-9">
           <h2 className="text-3xl font-bold  text-red-600">Unleash the Heatwave:</h2><span className="text-3xl font-bold  text-black-900">Dive into the Coolest Gigs Near You!</span> 
   
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">

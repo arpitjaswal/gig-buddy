@@ -5,9 +5,9 @@ import {Link, useLocation} from "react-router-dom";
 
 const navigation = [
   { name: 'Gigs', to: '/gigs', current: false },
-  { name: 'Chat', to: '/chat', current: false },
-  { name: 'ReSell', to: '/resell', current: false },
-  { name: 'Calender', to: '/calender', current: false },
+   { name: 'Chat', to: '/chat', current: false },
+   { name: 'ReSell', to: '/resell', current: false },
+   { name: 'Calender', to: '/calender', current: false },
   { name: 'Contact', to: '/contact', current: false },
 ]
 
