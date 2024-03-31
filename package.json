@@ -4,7 +4,7 @@
   "description": "This would be a website where people can meet other people who like similar artists and can plan to go together.",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cd frontend && npm i && npm run build\" \"cd backend && npm i && npm start\""
+    "start": "concurrently \"cd frontend && npm i && npm run dev\" \"cd backend && npm i && npm run dev\""
   },
   "keywords": [],
   "author": "",
