@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 
 const EventPage = () => {
     const [showModal,setShowModal] = useState(false);
@@ -9,6 +9,19 @@ const EventPage = () => {
     const closeModal = () => {
         setShowModal(false);
     };
+
+    useEffect(() => {
+        const script = document.getElementById();
+        script.src = 'https://checkout.razorpay.com/v1/payment-button.js';
+        script.async = true;
+        script.dataset.payment_button_id = 'pl_NyheRa9X967bVs';
+        document.body.appendChild(script);
+
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, []);
+
   return (
     <>
         <div className='text-center'>
@@ -28,7 +41,7 @@ const EventPage = () => {
                     </div>
                 </div>
             )}
-                    <button type="button" className='text-white mt-6 bg-red-700 hover:bg-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900'> <a href="/underconstruction">Buy Ticket/s</a></button>
+                   <div id="buy"></div>
                     <button type="button" className="text-white mt-6 bg-gray-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-black-600 dark:hover:bg-black-700 dark:focus:ring-black-900" onClick={playTrailer}>Watch Event Trailer</button>
                 </div>
                 </div>
