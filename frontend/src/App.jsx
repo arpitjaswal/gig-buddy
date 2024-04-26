@@ -8,24 +8,27 @@ import  NavBar from "./components/NavBar"
 import { Routes, Route } from "react-router-dom"
 import UnderConstruction from "./components/UnderConstruction"
 import ReSell from "./components/ReSell"
+import LandingPage from "./components/Landingpage"
+import SignUp from "./components/authentication/SignUp"
+import Login from "./components/authentication/Login"
 
 function App() {
 
 
   return (
     <>
-      <NavBar/>
       <Routes>
-          <Route path="/" element={<Gigs />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/underconstruction" element={<UnderConstruction />} />
-          
           <Route path="/resell" element={<ReSell />} />
           <Route path="/four04" element={<Four04 />} />
           <Route path="/gigs" element={<Gigs />} />
           <Route path="/eventpage" element={<EventPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/chat" element={<UnderConstruction />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/timeline" element={<UnderConstruction />} />
+          <Route path="/login" element={<Login/>}/>
       </Routes>
     </>
   )

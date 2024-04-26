@@ -1,7 +1,7 @@
-import { Fragment } from 'react'
+import { Fragment,  } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 
 const navigation = [
   { name: 'Gigs', to: '/gigs', current: false },
@@ -18,13 +18,17 @@ function classNames(...classes) {
 
 
 
-export default function NavBar() {
+
+
+export default function NavBar({currentPage}) {
+  const navigate = useNavigate();
 const location = useLocation();
   return (
     <Disclosure as="nav" className="bg-red-600">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-9xl px-2 sm:px-9 lg:px-8">
+
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 
@@ -38,17 +42,21 @@ const location = useLocation();
                   )}
                 </Disclosure.Button>
               </div>
+
               <div className="flex flex-shrink-0 items-center">
                   <img
                     style={{height:"90px",width:"150px", borderRadius:"10px"}}
                     src="./src/assets/logo.png"
                     alt="GigBuddy"
+                    onClick={()=>{
+                      navigate('/')
+                    }}
                   />
                 </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
+                    {currentPage!='signup' && currentPage!='login' && navigation.map((item) => (
                       <Link
                         key={item.name}
                         to={item.to}
@@ -64,6 +72,7 @@ const location = useLocation();
                   </div>
                 </div>
               </div>
+              { currentPage!='signup' && currentPage!='login' &&
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
@@ -131,7 +140,9 @@ const location = useLocation();
                   </Transition>
                 </Menu>
               </div>
+                 }
             </div>
+       
           </div>
 
 
@@ -156,5 +167,6 @@ const location = useLocation();
         </>
       )}
     </Disclosure>
+  
   )
 }

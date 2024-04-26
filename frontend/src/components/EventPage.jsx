@@ -10,17 +10,17 @@ const EventPage = () => {
         setShowModal(false);
     };
 
-    useEffect(() => {
-        const script = document.getElementById();
-        script.src = 'https://checkout.razorpay.com/v1/payment-button.js';
-        script.async = true;
-        script.dataset.payment_button_id = 'pl_NyheRa9X967bVs';
-        document.body.appendChild(script);
+    // useEffect(() => {
+    //     const script = document.getElementById();
+    //     script.src = 'https://checkout.razorpay.com/v1/payment-button.js';
+    //     script.async = true;
+    //     script.dataset.payment_button_id = 'pl_NyheRa9X967bVs';
+    //     document.body.appendChild(script);
 
-        return () => {
-            document.body.removeChild(script);
-        };
-    }, []);
+    //     return () => {
+    //         document.body.removeChild(script);
+    //     };
+    // }, []);
 
   return (
     <>
