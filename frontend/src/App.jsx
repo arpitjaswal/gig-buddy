@@ -25,7 +25,7 @@ function App() {
           <Route path="/gigs" element={<Gigs />} />
           <Route path="/eventpage" element={<EventPage />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/chat" element={<UnderConstruction />} />
+          <Route path="/chat" element={<Chat />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/timeline" element={<UnderConstruction />} />
           <Route path="/login" element={<Login/>}/>

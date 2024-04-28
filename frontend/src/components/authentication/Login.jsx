@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import NavBar from "../NavBar";
 import './LogIn.css'; // Import CSS file for Login component
 
 const Login = () => {
   const [emailError, setEmailError] = useState('');
   const [loginError, setLoginError] = useState('');
+  const navigate = useNavigate();
 
   const handleLogin = async (event) => {
     event.preventDefault(); // Prevent default form submission behavior
@@ -16,13 +18,16 @@ const Login = () => {
       setEmailError("Please enter a valid email address.");
       return;
     }
+    
 
     setEmailError(""); // Clear any previous email error
 
     const password = document.getElementById("password").value;
-
+    if(email=="email@email.com" && password==="password"){
+      navigate("/chat")
+  }
     try {
-      // Make API request to backend
+
       const response = await fetch('your-backend-api-url/login', {
         method: 'POST',
         headers: {
@@ -31,20 +36,19 @@ const Login = () => {
         body: JSON.stringify({ email, password }),
       });
 
-      // Check if request was successful
+
       if (!response.ok) {
-        throw new Error('Login failed. Please try again.'); // Handle non-200 response
+        throw new Error('Login failed. Please try again.'); 
       }
 
-      // Reset any previous login error
+
       setLoginError('');
 
-      // Extract and use response data if needed
+
       const data = await response.json();
       console.log('Login successful:', data);
 
-      // Optionally, redirect user to another page upon successful login
-      // history.push("/dashboard");
+  
     } catch (error) {
       setLoginError(error.message);
     }
