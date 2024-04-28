@@ -11,7 +11,7 @@ dotenv.config();
 const PORT = process.env.PORT || 2345;
 
 app.get("/",(req,res)=>{
-    res.sendFile("/Users/arpitjaswal/Desktop/gig-buddy/backend/assets/sm_abj_crowdInteraction.jpg")
+    res.send("crazy")
 })
 
 
