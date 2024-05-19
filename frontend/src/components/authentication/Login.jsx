@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import NavBar from "../NavBar";
 import './LogIn.css'; // Import CSS file for Login component
+import { GoogleLogin } from '@react-oauth/google';
+import axios from "axios"
+
 
 const Login = () => {
   const [emailError, setEmailError] = useState('');
@@ -20,7 +23,7 @@ const Login = () => {
     }
     
 
-    setEmailError(""); // Clear any previous email error
+    setEmailError("");
 
     const password = document.getElementById("password").value;
     if(email=="email@email.com" && password==="password"){
@@ -28,7 +31,7 @@ const Login = () => {
   }
     try {
 
-      const response = await fetch('your-backend-api-url/login', {
+      const response = await axios('/loginCheck', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -64,7 +67,7 @@ const Login = () => {
             <div className="form-group">
               <label htmlFor="email">Email</label>
               <input type="email" id="email" className="input-field"/>
-              
+
             </div>
             <div className="form-group">
               <label htmlFor="password">Password</label>
@@ -73,8 +76,24 @@ const Login = () => {
             {emailError && <div className="error-message">{emailError}</div>}
             {loginError && <div className="error-message">{loginError}</div>}
             <button type="submit" className="submit-button">Login</button>
+            
           </form>
+          <center style={{marginTop:"5px", marginBottom:"5px"}}> Or 
+          <GoogleLogin
+  onSuccess={credentialResponse => {
+    console.log(credentialResponse);
+    console.log("successfully logged in using google ID")
+  }}
+  onError={() => {
+    console.log('Login Failed');
+  }}
+/>
+          </center>
+         
+          
         </div>
+        
+        
       </div>
     </>
   );
