@@ -4,10 +4,10 @@ import express from "express"
 
 const router = express.Router();
 
-router.post("/checkLogin", async (req, res) =>{
+router.post("/loginCheck", async (req, res) =>{
     const {email, password} = req.body;
-    
+console.log(req)
+    res.json({status:"authorized"})
+
 })
-
-
 

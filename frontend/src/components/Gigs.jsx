@@ -1,5 +1,6 @@
 import React from "react"
 import { useState } from "react";
+import NavBar from "./NavBar";
 
 
 const products = [
@@ -41,6 +42,8 @@ const products = [
       
     }
     return (
+      <>
+      <NavBar currentPage='gigs'/>
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-10 lg:max-w-6xl lg:px-9">
           <h2 className="text-3xl font-bold  text-red-600">Unleash the Heatwave:</h2><span className="text-3xl font-bold  text-black-900">Dive into the Coolest Gigs Near You!</span> 
@@ -74,6 +77,7 @@ const products = [
           </div>
         </div>
       </div>
+      </>
     )
   }
   

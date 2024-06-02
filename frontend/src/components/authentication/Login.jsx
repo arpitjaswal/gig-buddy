@@ -27,7 +27,7 @@ const Login = () => {
 
     const password = document.getElementById("password").value;
     if(email=="email@email.com" && password==="password"){
-      navigate("/chat")
+      navigate("/gigs")
   }
     try {
 
@@ -39,10 +39,9 @@ const Login = () => {
         body: JSON.stringify({ email, password }),
       });
 
-
-      if (!response.ok) {
-        throw new Error('Login failed. Please try again.'); 
-      }
+    
+      console.log(response)
+      
 
 
       setLoginError('');
