@@ -60,6 +60,9 @@ export default function Contact() {
         </div>
       </div>
     </div>
+    <div style={{display:"flex",justifyContent:"center", fontWeight:"bold"}}>
+      <h1>email: arpitjaswal15@gmail.com</h1>
+    </div>
     </>
   )
 }

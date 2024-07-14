@@ -74,14 +74,14 @@ const location = useLocation();
               </div>
               { currentPage!='signup' && currentPage!='login' &&
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
+                {/* <button
                   type="button"
                   className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                </button> */}
 
                 
                 <Menu as="div" className="relative ml-3">
@@ -106,7 +106,7 @@ const location = useLocation();
                     leaveTo="transform opacity-0 scale-95"
                   >
                     <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <Menu.Item>
+                      {/* <Menu.Item>
                         {({ active }) => (
                           <Link
                             href="#"
@@ -115,8 +115,8 @@ const location = useLocation();
                             Your Profile
                           </Link>
                         )}
-                      </Menu.Item>
-                      <Menu.Item>
+                      </Menu.Item> */}
+                      {/* <Menu.Item>
                         {({ active }) => (
                           <Link
                             href="#"
@@ -125,7 +125,7 @@ const location = useLocation();
                             Settings
                           </Link>
                         )}
-                      </Menu.Item>
+                      </Menu.Item> */}
                       <Menu.Item>
                         {({ active }) => (
                           <Link

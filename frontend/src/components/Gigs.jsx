@@ -8,7 +8,7 @@ const products = [
       id: 1,
       name: 'Seedhe Maut',
       href: '/eventpage',
-      imageSrc: 'https://static.hiphopdx.com/2021/09/Seedhe-Maut-NATKHAT_1280x720_09142021-1200x675.jpg',
+      imageSrc: 'https://img.redbull.com/images/w_2400/q_auto,f_auto/redbullcom/2021/3/18/lt20l6aqlpkh1xnwv0px/seedhe-maut-encore-abj-calm-indian-hip-hop-duo-rappers',
       imageAlt: "Front of men's Basic Tee in black.",
       price: '25/04/2024',
       color: 'Nehru Place, New Delhi',
@@ -46,7 +46,7 @@ const products = [
       <NavBar currentPage='gigs'/>
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-10 lg:max-w-6xl lg:px-9">
-          <h2 className="text-3xl font-bold  text-red-600">Unleash the Heatwave:</h2><span className="text-3xl font-bold  text-black-900">Dive into the Coolest Gigs Near You!</span> 
+          <h2 className="text-3xl font-bold  text-red-600">Active Events</h2><span className="text-3xl font-bold  text-black-900">Dive into the Coolest Gigs Near You!</span> 
   
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             {products.map((product) => (

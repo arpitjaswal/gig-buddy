@@ -9,6 +9,7 @@ const Four04 = () => {
   const [dogImage,setDogImage] = useState("https://media.istockphoto.com/id/454238885/photo/pug-puppy-dog.jpg?s=612x612&w=0&k=20&c=Da9JqQ3ViGeNvM6IPGBprXBt8PLSQ8_rPgvYWhEtpHU=")
 
   useEffect(()=>{
+   if(seconds%2==0){
     axios.get("https://dog.ceo/api/breeds/image/random")
     .then((res)=>{
       if(res){
@@ -17,6 +18,7 @@ const Four04 = () => {
         }
       }
     })
+   }
   },[seconds])
   
   setTimeout(()=>{
@@ -33,12 +35,13 @@ const Four04 = () => {
     <>
 
     <NavBar currentPage='login'/>
-
-    <div style={{display:"flex", flexDirection:"column", margin:"100px", padding:"100px"}}>
-      <img src={dogImage} style={{width:"200px", height:"200px"}}></img>
+    <div style={{display:"flex", justifyContent:"center"}}>
+    <div style={{backgroundImage:`url(${dogImage})`,display:"flex", flexDirection:"column", margin:"100px", padding:"100px", backgroundRepeat:"no-repeat"}}>
     <h1 style={{fontFamily:"monospace", color:"red", fontSize:"40px"}}>How the fuck you ended up here, bud?</h1>
     <h6 style={{fontFamily:"fantasy", fontSize:"40px"}}>redirecting you to the login page in {seconds} seconds!</h6>
     </div>
+    </div>
+  
     
     </>
   )
