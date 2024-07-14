@@ -1,8 +1,9 @@
-import React from 'react'
 
+import NavBar from "./NavBar"
 const ReSell = () => {
   return (
     <>
+    <NavBar currentPage='resell'/>
    <div className='blackticket'>
    <form >
     <h1 className='text-center text-4xl text-white bg-red-600 px-5 py-5 mt-10 mr-80 ml-80 rounded-lg'>ReSell Event Tickets</h1>

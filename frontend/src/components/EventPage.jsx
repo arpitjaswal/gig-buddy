@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from 'react'
+import NavBar from './NavBar';
 
 const EventPage = () => {
     const [showModal,setShowModal] = useState(false);
@@ -24,6 +25,7 @@ const EventPage = () => {
 
   return (
     <>
+    <NavBar currentPage="eventpage"/>
         <div className='text-center'>
             <h6 className='text-6xl font-sans mt-5 bg-slate-200'>Seedhe Maut: Lunch Break Tour 2024</h6>
             <div className=''>

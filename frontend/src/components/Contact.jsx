@@ -1,6 +1,6 @@
-import React from 'react'
-import { TicketIcon, CurrencyDollarIcon, UserGroupIcon, CalendarIcon } from '@heroicons/react/24/outline'
 
+import { TicketIcon, CurrencyDollarIcon, UserGroupIcon, CalendarIcon } from '@heroicons/react/24/outline'
+import NavBar from './NavBar'
 const features = [
   {
     name: 'Event Ticket Bookings',
@@ -30,6 +30,8 @@ const features = [
 ]
 export default function Contact() {
   return (
+    <>
+    <NavBar currentPage='contact'/>
     <div className="bg-white py-24 sm:py-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -58,5 +60,6 @@ export default function Contact() {
         </div>
       </div>
     </div>
+    </>
   )
 }
